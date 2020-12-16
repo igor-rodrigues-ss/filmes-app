@@ -1,0 +1,39 @@
+[
+	{
+		"id": 1,
+		"nome": "Vingadores Ultimato",
+		"ano": 2019,
+		"diretor": "Joe e Anthony Russo", 
+		"genero": "Ação",
+		"descricao": "Último filme dos Vingadores.",
+		"poster": "https://br.web.img3.acsta.net/pictures/19/03/15/10/35/4177435.jpg" 
+	},
+	{
+		"id": 2,
+		"nome": "Homem Aranha Longe de Casa",
+		"ano": 2019,
+		"diretor": "Jon Watts", 
+		"genero": "Ação",
+		"descricao": "Segundo filme do novo homem aranha.",
+		"poster": "https://br.web.img2.acsta.net/pictures/19/07/05/17/30/5167951.jpg" 
+
+	},
+	{
+		"id": 3,
+		"nome": "Vingadores 1",
+		"ano": 2012,
+		"diretor": "Joe e Anthony Russo", 
+		"genero": "Ação",
+		"descricao": "Primeiro filme dos vingadores.",
+		"poster": "https://upload.wikimedia.org/wikipedia/pt/thumb/6/69/The_Avengers_Cartaz.jpg/250px-The_Avengers_Cartaz.jpg" 
+	},
+	{
+		"id": 4,
+		"nome": "Capitão América: O Primeiro Vingador",
+		"ano": 2011,
+		"diretor": "Joe Johnston", 
+		"genero": "Ação",
+		"descricao": "Filme do primeiro vingador.",
+		"poster": "https://upload.wikimedia.org/wikipedia/pt/thumb/d/d8/Capit%C3%A3o_Am%C3%A9rica_O_Primeiro_Vingador_-_Poster.jpg/250px-Capit%C3%A3o_Am%C3%A9rica_O_Primeiro_Vingador_-_Poster.jpg" 
+	}
+]

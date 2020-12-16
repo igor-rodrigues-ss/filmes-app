@@ -1,27 +1,27 @@
 # FilmesApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+Página para Cadastro de Filmes construída com Angular 11.
 
-## Development server
+## Pré-requisitos:
+- Node
+- npm ou yarn
+- docker e docker-compose
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Modo de Desenvolvimento
+- Faça o clone do projeto no git.
+- Acesse o diretório do projeto e instale as dependências.
+- Execute o servidor de desenvolvimento do angular.
+```shell
+npm install
+ng serve
+# Acesse http://localhost:4200
+```
 
-## Code scaffolding
+### Deploy
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Faça o clone do projeto no git.
+- Dentro do projeto acesse o diretório deploy e execute o script **deploy.sh**.
+```shell
+./deploy.sh
+# Acesse http://localhost:4200
+```

@@ -1,0 +1,150 @@
+<div>
+	<h2>Filmes da Márvel</h2>
+	<div id="divCad">
+		<div id="divForm">
+			<mat-card>
+				<mat-card-header>
+					<mat-card-title>Cadastro de Filmes</mat-card-title>
+					<mat-card-subtitle>Cadastre seu filme favorito</mat-card-subtitle>	
+				</mat-card-header>
+
+				<mat-card-content>
+					<mat-form-field class="hide">
+						<mat-label>Id</mat-label>
+						<input matInput [(ngModel)]="filme.id">
+					</mat-form-field>
+				  	<br/>
+
+					<mat-form-field>
+						<mat-label>Nome</mat-label>
+						<input matInput placeholder="Nome" name="name" [(ngModel)]="filme.nome">
+					</mat-form-field>
+				  	<br/>
+
+					<mat-form-field>
+						<mat-label>Ano</mat-label>
+						<input matInput placeholder="Ano" [(ngModel)]="filme.ano">
+					</mat-form-field> 
+					<br/>
+
+					<mat-form-field>
+						<mat-label>Diretor</mat-label>
+						<input matInput placeholder="Diretor" [(ngModel)]="filme.diretor">
+					</mat-form-field>
+					<br/>
+
+					<mat-form-field>
+						<mat-label>Gênero</mat-label>
+						<input matInput placeholder="Gênero" [(ngModel)]="filme.genero">
+					</mat-form-field>
+				  	<br/>
+
+					<mat-form-field>
+						<mat-label>Pôster</mat-label>
+						<input matInput placeholder="Pôster" [(ngModel)]="filme.poster">
+					</mat-form-field>
+
+				    <button mat-icon-button color="primary" (click)="showPreview()">
+		         		<mat-icon>preview</mat-icon>
+		      		</button>
+				  	
+				  	<br/>
+
+					<mat-form-field>
+						<mat-label>Descrição</mat-label>
+						<textarea matInput placeholder="Descrição" [(ngModel)]="filme.descricao"></textarea>
+					</mat-form-field>
+				</mat-card-content>
+
+				<mat-card-actions>
+					<div id="divFormAction">
+						<button mat-stroked-button color="warn" (click)="clear()">Limpar</button>
+						&nbsp;
+						<button mat-stroked-button color="primary" (click)="onSubmit()">Salvar</button>
+					</div>
+				</mat-card-actions>
+
+			</mat-card>
+		</div>
+
+		<mat-card id="cardImg">
+			<mat-card-header>
+				<mat-card-title>Preview</mat-card-title>
+				<mat-card-subtitle>Pré-visualize os dados do seu filme.</mat-card-subtitle>	
+			</mat-card-header>
+
+			<mat-card-content id="cardContentImg">
+				<img src="{{posterLink}}"/>
+		    </mat-card-content>
+
+		    <mat-card-action>
+		    	<ul>
+		    		<li><b>Nome:</b> {{filme.nome}}</li>
+		    		<li><b>Ano:</b> {{filme.ano}}</li>
+		    		<li><b>Diretor:</b> {{filme.diretor}}</li>
+		    		<li><b>Gênero:</b> {{filme.genero}}</li>
+		    		<li><b>Descrição:</b> {{filme.descricao}}</li>
+		    	</ul>
+	    	</mat-card-action>
+		</mat-card>
+	</div>
+
+	<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+	    <ng-container matColumnDef="Atualizar">
+		    <th mat-header-cell *matHeaderCellDef> Atualizar </th>
+		    <td mat-cell *matCellDef="let element" class="align-right">
+		    	<button mat-mini-fab color="primary" (click)="onUpdate(element)">
+		          <mat-icon>update</mat-icon>
+		        </button>
+
+		    </td>
+	    </ng-container>
+
+	   	<ng-container matColumnDef="Excluir">
+		    <th mat-header-cell *matHeaderCellDef> Excluir </th>
+		    <td mat-cell *matCellDef="let element" class="align-right">
+		    	<button mat-mini-fab color="warn" (click)="onDelete(element.id)">
+		          <mat-icon>close</mat-icon>
+		        </button>
+		    </td>
+	    </ng-container>
+
+	  <ng-container matColumnDef="Nome">
+	    <th mat-header-cell *matHeaderCellDef> Nome </th>
+	    <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+	  </ng-container>
+
+	  <ng-container matColumnDef="Ano">
+	    <th mat-header-cell *matHeaderCellDef> Ano </th>
+	    <td mat-cell *matCellDef="let element"> {{element.ano}} </td>
+	  </ng-container>
+
+	  <ng-container matColumnDef="Diretor">
+	    <th mat-header-cell *matHeaderCellDef> Diretor </th>
+	    <td mat-cell *matCellDef="let element"> {{element.diretor}} </td>
+	  </ng-container>
+
+	  <ng-container matColumnDef="Gênero">
+	    <th mat-header-cell *matHeaderCellDef> Gênero </th>
+	    <td mat-cell *matCellDef="let element"> {{element.genero}} </td>
+	  </ng-container>
+
+	  <ng-container matColumnDef="Descrição">
+	    <th mat-header-cell *matHeaderCellDef> Descrição </th>
+	    <td mat-cell *matCellDef="let element"> {{element.descricao}} </td>
+	  </ng-container>
+
+	  <ng-container matColumnDef="Poster">
+	    <th mat-header-cell *matHeaderCellDef> Poster </th>
+	    <td mat-cell class="truncate" *matCellDef="let element"> {{element.poster}} </td>
+	  </ng-container>
+
+	  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+	  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+	</table>
+	 
+	<br/>
+	<br/>
+
+</div>

@@ -1,0 +1,67 @@
+table {
+	width: 80vw;
+	margin: 2% 10%;
+}
+
+h2 {
+	width: 16vw;
+	margin: 30px auto;
+	color: #795548;
+	font-size: 20pt;
+	font-weight: bolder;
+	font-family: serif;
+}
+
+.hide {
+	display: none;
+}
+
+mat-grid-tile {
+  background: lightblue;
+}
+
+mat-form-field {
+	width: 90%;
+}
+
+#divCad{
+	width: 80vw;
+	margin: auto;
+	display: flex;
+}
+
+
+#cardImg {
+	padding: 1%;
+	width: 35vw;
+}
+
+.truncate {
+  max-width: 80px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.align-right {
+	text-align: right;
+}
+
+#divFormAction {	
+	text-align: right;
+	margin-right: 10%;
+}
+
+img {
+	max-width: 50vw;
+	height: 48vh;
+}
+
+#cardContentImg {
+	text-align: center;
+}
+
+#divForm {
+	width: 40vw;
+	margin: auto;
+}
